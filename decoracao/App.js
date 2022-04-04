@@ -1,7 +1,8 @@
 import React from "react";
 import { ImageBackground, StyleSheet, Text, View, TextInput, Button } from "react-native";
+import Icon from 'react-native-vector-icons/AntDesign'
 import Ionicons from 'react-native-vector-icons/Ionicons';
-import imagelivro from './assets/decoracao.jpg';
+import imageDecoracao from './assets/decoracao.jpg';
 import { NavigationContainer } from '@react-navigation/native';
 import { createBottomTabNavigator } from '@react-navigation/bottom-tabs';
 
@@ -11,7 +12,7 @@ const Tab = createBottomTabNavigator();
 const Listarlivros = () => {
   return (
     <View style={estilos.fundo}>
-    <TextInput placeholder="Nome Decoração " style={estilos.input}/>
+    <TextInput placeholder="Nome Decoração " style={estilos.inputListagem}/>
     </View>
   )
 }
@@ -41,7 +42,7 @@ const Cadastrar = () => {
 export default function App() {
   return (
     <View style={estilos.principal}>
-      <ImageBackground source={imagelivro} style={estilos.cabecalho}>
+      <ImageBackground source={imageDecoracao} style={estilos.cabecalho}>
       <Text style={estilos.titulo}>Decoração</Text>
       </ImageBackground>
 
@@ -108,6 +109,17 @@ const estilos = StyleSheet.create({
     backgroundColor: '#f1f6f6',
     padding: 10,
     width: 190
+    
+  },
+
+  inputListagem: {
+    marginLeft: 40,
+    marginTop: 0,
+    marginBottom: 20,
+    paddingBottom: 5,
+    backgroundColor: '#f1f6f6',
+    padding: 10,
+    width: 240
     
   },
 
